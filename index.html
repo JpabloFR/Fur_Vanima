@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#102b29" />
+  <meta name="description" content="Für Vanima — Una celebración de la vida, la transformación y todo lo hermoso que aún está por ocurrir." />
+  <title>Für Vanima — La vida insiste</title>
+  <style>
+    :root{--pine:#102b29;--pine2:#183d37;--ivory:#f3f0e8;--sage:#a2b5a5;--clay:#da9b7e;--faint:#d8dbcf;--ink:#20362f}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--pine);color:var(--ivory);font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}button{font:inherit}a{color:inherit}.serif{font-family:'Iowan Old Style',Baskerville,'Palatino Linotype','Book Antiqua',Georgia,serif}.page{overflow:hidden}::selection{background:var(--clay);color:var(--pine)}
+    .nav{position:absolute;top:0;left:0;width:100%;z-index:9;display:flex;align-items:center;justify-content:space-between;padding:29px clamp(24px,6vw,95px);font-size:11px;font-weight:650;letter-spacing:.21em;text-transform:uppercase}.mark{display:flex;gap:12px;align-items:center;text-decoration:none}.mark-icon{width:24px;height:24px;border:1px solid var(--sage);border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;font-size:15px;color:var(--clay)}.nav a:not(.mark){text-decoration:none;opacity:.74;transition:opacity .2s}.nav a:hover{opacity:1}
+    .hero{position:relative;min-height:100svh;display:flex;align-items:center;isolation:isolate;background:radial-gradient(ellipse at 79% 51%,#386055 0%,#23443d 24%,#142f2c 56%,#0e2424 85%)}
+    .hero:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.27;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");pointer-events:none}.hero-content{width:min(840px,80%);padding:155px 0 125px;margin-left:clamp(26px,11.5vw,210px);z-index:3}.eyebrow,.smallcaps{text-transform:uppercase;letter-spacing:.31em;font-size:11px;font-weight:650}.eyebrow{color:#c9d5ca;display:flex;align-items:center;gap:18px}.eyebrow:before{content:"";height:1px;width:47px;background:var(--clay)}h1,h2,p{margin-top:0}.hero h1{margin:35px 0 21px;font-size:clamp(80px,11vw,176px);line-height:.93;letter-spacing:-.072em;font-weight:400;position:relative}.hero h1 em{font-weight:400;color:#e4b49b}.hero-line{height:1px;width:min(460px,87%);background:linear-gradient(90deg,var(--clay),transparent);margin:43px 0 31px}.hero .lead{font-size:clamp(19px,2.2vw,26px);line-height:1.47;max-width:520px;color:#dfebe1;font-weight:300;letter-spacing:-.02em}.hero .lead strong{font-weight:500;color:#fff}.actions{display:flex;align-items:center;gap:26px;margin-top:42px;flex-wrap:wrap}.cta{cursor:pointer;border:1px solid #cbd8c9;background:var(--ivory);color:var(--pine);padding:16px 23px;border-radius:2px;letter-spacing:.10em;font-size:11px;font-weight:760;text-transform:uppercase;transition:transform .25s,background .25s}.cta:hover{transform:translateY(-3px);background:#fff}.link{font-size:12px;letter-spacing:.1em;text-decoration:none;border-bottom:1px solid #9cb5a2;padding-bottom:5px}.sun{position:absolute;right:-13%;top:8%;width:min(69vw,910px);aspect-ratio:1;border-radius:50%;z-index:1;background:radial-gradient(circle at 43% 37%,#f0c2a0 0%,#e6aa8f 27%,#b9756b 55%,#6a5963 76%,transparent 77%);opacity:.82;filter:blur(.5px);box-shadow:0 0 115px #eaa58429,0 0 240px #dfa27d1d;animation:orb 13s ease-in-out infinite alternate}.sun:after{content:"";position:absolute;inset:13%;border:1px solid #ffe3c144;border-radius:50%}.hero-vine{position:absolute;right:1%;bottom:-8%;width:min(52vw,650px);height:85%;z-index:2;opacity:.82;filter:drop-shadow(0 7px 16px #081e1966)}.hero-vine path{stroke:#f2e5c8;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}.hero-vine .leaf{fill:#bed0ac22;stroke:#dbe0c2;stroke-width:1.7}.hero-vine .flower{fill:#f7d1ab20;stroke:#f7d6b5}.scrollnote{position:absolute;bottom:43px;left:clamp(26px,6vw,95px);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#c9d7c7;display:flex;gap:16px;align-items:center}.scrollnote:after{content:"";height:1px;width:45px;background:currentColor}
+    .section{position:relative;padding:clamp(105px,12vw,190px) clamp(26px,10vw,170px)}.chapter{display:flex;align-items:center;gap:18px;color:#a0aca3}.chapter span{height:1px;width:38px;background:currentColor}.statement{background:var(--ivory);color:var(--ink);display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:8vw;align-items:center}.statement .chapter{color:#8e8273}.large-quote{font-size:clamp(45px,6.1vw,94px);line-height:1.06;letter-spacing:-.055em;font-weight:400;margin:35px 0}.large-quote em{color:#b97e67;font-weight:400}.statement-body{max-width:400px;color:#52645a;font-size:clamp(17px,1.6vw,20px);line-height:1.85}.statement-body strong{color:var(--ink);font-weight:600}.rule{width:72px;height:2px;background:var(--clay);margin-bottom:34px}.sun-stamp{width:min(100%,390px);aspect-ratio:1;border:1px solid #bec8b8;border-radius:50%;margin:0 auto;display:grid;place-items:center;position:relative}.sun-stamp:before,.sun-stamp:after{content:"";position:absolute;border:1px solid #bec8b8;border-radius:50%}.sun-stamp:before{inset:17%}.sun-stamp:after{inset:32%;background:#db9b7e4a;border:none}.sun-stamp svg{width:110%;height:110%;position:relative;z-index:1;transform:rotate(-18deg)}.sun-stamp path{fill:none;stroke:#436351;stroke-width:1.8;stroke-linecap:round}
+    .interlude{min-height:84svh;background:#1c3a36;display:grid;place-items:center;text-align:center;padding:110px 25px;position:relative;isolation:isolate}.interlude:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#32564a 0%,transparent 68%);z-index:-1}.interlude-inner{max-width:910px}.interlude h2{font-size:clamp(48px,7.3vw,108px);font-weight:400;line-height:1.08;letter-spacing:-.058em;margin:28px auto}.interlude h2 em{color:var(--clay);font-weight:400}.interlude .under{font-size:17px;color:#c9d6cc;line-height:1.7;max-width:580px;margin:0 auto 45px}.horizon{height:1px;max-width:560px;background:linear-gradient(90deg,transparent,#9eb4a3,transparent);margin:0 auto 42px;position:relative}.horizon:before,.horizon:after{content:"";width:7px;height:7px;position:absolute;top:-3px;border-radius:50%;background:#e4ac8d}.horizon:before{left:7%}.horizon:after{right:7%}.interlude .minor{color:#b6c7b9;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+    .experience{background:#e6e9dd;color:var(--ink);text-align:center;min-height:94svh;display:flex;flex-direction:column;justify-content:center;align-items:center}.experience .chapter{color:#708776}.experience h2{font-weight:400;font-size:clamp(51px,7.3vw,112px);line-height:1.03;letter-spacing:-.06em;margin:28px auto;max-width:1050px}.experience h2 em{color:#b47861;font-weight:400}.experience .desc{font-size:17px;line-height:1.7;max-width:490px;color:#5b6c61;margin:0 auto 34px}.plant-wrap{position:relative;height:260px;width:280px;margin-bottom:6px}.plant-wrap svg{height:100%;width:100%;overflow:visible}.plant-wrap path{fill:none;stroke:#3e6652;stroke-linecap:round;stroke-linejoin:round;stroke-width:3}.plant-wrap .stem{stroke-dasharray:300;stroke-dashoffset:300;transition:stroke-dashoffset 2.5s cubic-bezier(.2,.6,.25,1)}.plant-wrap .foliage{opacity:0;transform-origin:140px 230px;transform:scale(.7);transition:opacity 1.3s ease .6s,transform 1.9s ease .6s}.plant-wrap .petal{fill:#cf8f752e;stroke:#b4755f;stroke-width:2}.plant-wrap.bloom .stem{stroke-dashoffset:0}.plant-wrap.bloom .foliage{opacity:1;transform:scale(1)}.soil{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);height:1px;width:190px;background:#87998a}.experience .cta{background:var(--pine);color:var(--ivory);border-color:var(--pine)}.experience .cta:hover{background:#2b5147}.response{height:38px;margin-top:17px;color:#52675a;font-size:15px;letter-spacing:.01em;opacity:0;transition:opacity .8s}.response.visible{opacity:1}
+    .finale{min-height:67svh;background:#102b29;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px 25px}.finale .title{font-size:clamp(64px,10vw,142px);font-weight:400;letter-spacing:-.066em;margin:20px 0}.finale .subtitle{font-size:clamp(17px,2.1vw,24px);font-weight:400;font-style:italic;color:#d3dcca;line-height:1.6;margin-bottom:42px}.finale .sign{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#a3b7a8}.finale .mini{margin:0 auto 16px;width:1px;height:70px;background:linear-gradient(transparent,var(--clay))}.footer{background:#0b211f;padding:28px clamp(25px,6vw,95px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11px;letter-spacing:.15em;color:#9aafa0;text-transform:uppercase}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .9s ease,transform .9s ease}.reveal.show{opacity:1;transform:none}@keyframes orb{from{transform:translate(0,0) scale(1)}to{transform:translate(-2%,3%) scale(1.045)}}
+    @media(max-width:850px){.hero-content{margin-left:8%;width:86%}.sun{width:92vw;right:-49%;top:10%;opacity:.5}.hero-vine{width:82vw;right:-27%;opacity:.55}.statement{grid-template-columns:1fr;gap:65px}.statement .sun-stamp{width:260px}.statement-copy{max-width:650px}.nav{padding:23px 26px}.nav a:not(.mark){font-size:10px}.hero h1{font-size:clamp(76px,13.6vw,128px)}.hero .lead{max-width:420px}.scrollnote{bottom:24px}.section{padding:105px 29px}.footer{font-size:9px}}
+    @media(max-width:520px){.hero{min-height:850px;min-height:100svh}.hero-content{padding:130px 0 115px}.hero h1{font-size:clamp(72px,17.5vw,100px);letter-spacing:-.068em}.hero .lead{font-size:19px;max-width:320px}.sun{width:120vw;right:-73%;top:14%}.hero-vine{width:97vw;height:70%;right:-33%;bottom:-9%}.eyebrow{font-size:9px;letter-spacing:.2em}.nav .about-link{display:none}.actions{gap:20px}.cta{font-size:10px}.scrollnote{left:8%}.large-quote{font-size:clamp(45px,11.2vw,65px)}.interlude h2{font-size:clamp(48px,11.4vw,68px)}.experience h2{font-size:clamp(49px,11.8vw,70px)}.finale .title{font-size:clamp(68px,15vw,95px)}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+    /* Música y origami: nuevos capítulos */
+    .media-chapter{padding:clamp(85px,10vw,145px) clamp(24px,9vw,155px);background:#142f2b;color:var(--ivory)}
+    .media-chapter.origami{background:#eae9df;color:var(--ink)}
+    .media-grid{max-width:1320px;margin:auto;display:grid;grid-template-columns:minmax(0,.77fr) minmax(0,1.23fr);align-items:center;gap:clamp(32px,6vw,105px)}
+    .media-copy h2{font-weight:400;font-size:clamp(46px,5.3vw,84px);line-height:1.06;letter-spacing:-.055em;margin:26px 0}
+    .media-copy h2 em{font-weight:400;color:#e2ac8c}
+    .origami .media-copy h2 em{color:#b47760}
+    .media-copy p{font-size:clamp(16px,1.4vw,19px);line-height:1.8;max-width:480px;color:#c7d7ca}
+    .origami .media-copy p{color:#596c60}
+    .media-note{font-size:11px!important;letter-spacing:.13em;text-transform:uppercase;opacity:.75;margin-top:19px}
+    .media-frame{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;border:1px solid #a4bca244;box-shadow:0 25px 65px #071c1944;background:#0b211f}
+    .origami .media-frame{box-shadow:0 20px 65px #172e291e;border-color:#acb9aa}
+    .media-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .media-link{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.035em;text-underline-offset:5px;opacity:.8}
+    @media(max-width:850px){.media-grid{grid-template-columns:1fr;gap:35px}.media-chapter{padding:80px 27px}.media-copy h2{font-size:clamp(49px,9vw,76px)}.media-frame{max-width:850px}}
+
+    /* Laboratorio de cardioides — sin bibliotecas externas */
+    .cardioid-section{background:#132d2a;color:var(--ivory);padding:clamp(85px,10vw,145px) clamp(24px,8vw,135px)}
+    .cardioid-head{max-width:1220px;margin:0 auto 38px}.cardioid-head h2{font-weight:400;font-size:clamp(54px,7vw,100px);line-height:1.05;letter-spacing:-.055em;margin:20px 0}.cardioid-head h2 em{font-weight:400;color:var(--clay)}.cardioid-head p{line-height:1.8;max-width:690px;color:#c4d4c8;font-size:17px}
+    .cardioid-lab{max-width:1220px;margin:auto;display:grid;grid-template-columns:minmax(0,1.34fr) minmax(275px,.66fr);gap:27px;align-items:stretch}
+    .cardioid-visual{position:relative;min-height:485px;background:radial-gradient(circle at 50% 46%,#2a4c44 0%,#152f2c 56%,#102724 100%);border:1px solid #9dbbad31;overflow:hidden}
+    .cardioid-visual:after{position:absolute;content:'';inset:14px;border:1px solid #a7bfa414;pointer-events:none}
+    #cardioid-canvas{display:block;width:100%;height:100%;min-height:485px;touch-action:pan-y;cursor:grab}#cardioid-canvas:active{cursor:grabbing}
+    .canvas-hint{position:absolute;left:24px;bottom:21px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#d6e4d0a8;pointer-events:none}.canvas-index{position:absolute;left:25px;top:22px;color:#c8d8c4a0;letter-spacing:.2em;font-size:10px;pointer-events:none}
+    .cardioid-controls{border:1px solid #adc4b044;background:#1a3933;padding:clamp(23px,3vw,37px);display:flex;flex-direction:column;gap:25px}
+    .cardioid-controls .smallcaps{color:#e5bd9f}.cardioid-controls .control-note{color:#bfd0c5;font-size:13px;line-height:1.65;margin:-8px 0 0}
+    .cardioid-switch{display:grid;grid-template-columns:1fr 1fr;border:1px solid #a9bdad65}.cardioid-switch button{border:0;background:transparent;color:#d4e2d5;padding:14px 6px;font-size:12px;cursor:pointer}.cardioid-switch button[aria-pressed=true]{background:#e8e4d7;color:#17342e;font-weight:750}
+    .range-title{display:flex;justify-content:space-between;gap:16px;align-items:center;color:#f1eee3;font-size:13px;margin-bottom:11px}.range-title output{font-variant-numeric:tabular-nums;color:#edb99d}.cardioid-controls input[type=range]{accent-color:#d7a08a;width:100%;cursor:pointer}.cardioid-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}.cardioid-actions button{border:1px solid #b5c9bb80;background:transparent;color:#f3f0e8;padding:12px 15px;cursor:pointer;font-size:11px;letter-spacing:.055em}.cardioid-actions button:hover{background:#355d50}.cardioid-equation{font-family:Georgia,serif;font-style:italic;font-size:20px;color:#e8c6b0;min-height:25px}
+    .cardioid-after{max-width:1220px;margin:25px auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;color:#bbcec0;font-size:13px;line-height:1.7}.cardioid-after strong{font-weight:550;color:#edb99d}
+    @media(max-width:850px){.cardioid-lab{grid-template-columns:1fr}.cardioid-visual,#cardioid-canvas{min-height:370px}.cardioid-controls{gap:20px}.cardioid-section{padding:80px 26px}}
+    @media(max-width:480px){.cardioid-visual,#cardioid-canvas{min-height:320px}.canvas-hint{font-size:9px;left:15px}.cardioid-controls{padding:21px}}
+  </style>
+</head>
+<body>
+<main class="page" id="inicio">
+ <header class="nav"><a class="mark" href="#inicio" aria-label="Volver al inicio"><span class="mark-icon">✳</span> FÜR VANIMA</a><a class="about-link" href="#manifiesto">UN PEQUEÑO HOMENAJE A LA VIDA ↓</a></header>
+ <section class="hero" aria-labelledby="main-title">
+  <div class="sun" aria-hidden="true"></div>
+  <svg class="hero-vine" viewBox="0 0 600 800" aria-hidden="true"><path d="M298 850 C330 730 281 633 343 530 C409 423 371 313 419 200"/><path d="M342 540 Q233 490 178 396 M376 396 Q457 390 516 315 M391 305 Q315 255 303 162 M419 203 Q473 148 467 91"/><path class="leaf" d="M275 489 Q184 440 149 348 Q246 369 275 489Z M374 394 Q454 322 533 316 Q483 416 374 394Z M393 308 Q308 294 286 219 Q369 220 393 308Z M430 198 Q418 122 485 74 Q498 167 430 198Z"/><path class="flower" d="M178 396 C119 391 93 349 122 320 C83 298 102 256 145 267 C148 223 200 224 212 262 C260 244 282 287 245 322 C269 361 229 401 178 396Z"/><path class="flower" d="M516 315 C480 274 495 239 526 235 C529 198 569 201 579 231 C613 228 626 269 596 288 C602 325 552 339 516 315Z"/><path d="M171 354l29-43m-24 39l-36-16m40 12l34 16 M543 274l25-18m-25 20l9 24"/></svg>
+  <div class="hero-content">
+   <div class="eyebrow">Para todo lo que vuelve a empezar</div>
+   <h1 id="main-title" class="serif">Für<br><em>Vanima.</em></h1>
+   <div class="hero-line"></div>
+   <p class="lead">Hay algo extraordinario en la vida: <strong>incluso después de las tormentas, encuentra cómo continuar.</strong></p>
+   <div class="actions"><a class="cta" href="#musica">Escuchar el comienzo &nbsp; ↗</a><a class="link" href="#florecer">Ir a lo que florece</a></div>
+  </div>
+  <a class="scrollnote" href="#manifiesto" style="text-decoration:none">Desliza para descubrir</a>
+ </section>
+
+ <section class="media-chapter" id="musica" aria-labelledby="musica-title">
+  <div class="media-grid">
+   <div class="media-copy reveal">
+    <div class="chapter smallcaps">01 <span></span> Un comienzo con música</div>
+    <h2 id="musica-title" class="serif">La vida también<br><em>se celebra así.</em></h2>
+    <p>Hay canciones que no necesitan explicar nada. Simplemente abren una ventana, nos devuelven al presente y nos recuerdan que todavía queda muchísimo por vivir.</p>
+    <p class="media-note">Dale al play cuando quieras. Este momento es tuyo.</p>
+   </div>
+   <div class="reveal">
+    <div class="media-frame"><iframe src="https://www.youtube-nocookie.com/embed/Hox4Czb5Qhs?rel=0" title="Música para comenzar Für Vanima — video de YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <a class="media-link" href="https://www.youtube.com/watch?v=Hox4Czb5Qhs" target="_blank" rel="noopener noreferrer">Ver el video en YouTube ↗</a>
+   </div>
+  </div>
+ </section>
+ <section id="manifiesto" class="section statement" aria-labelledby="s-title">
+  <div class="statement-copy reveal"><div class="chapter smallcaps">02 <span></span> El arte de continuar</div><h2 id="s-title" class="large-quote serif">La vida no exige que todo sea fácil.<br><em>Solo nos invita a seguir.</em></h2></div>
+  <div class="reveal"><div class="sun-stamp" aria-hidden="true"><svg viewBox="0 0 400 400"><path d="M199 355 C201 300 186 262 204 207 C215 167 230 142 226 70 M204 235 Q142 224 102 159 M211 198 Q277 205 312 154 M221 147 Q181 121 176 87"/><path d="M104 160 Q89 111 52 96 Q53 144 104 160Z M311 155 Q328 100 376 94 Q377 141 311 155Z M177 88 Q142 60 151 27 Q197 41 177 88Z"/><path d="M226 72 C175 67 161 34 190 20 C213 -3 258 4 267 30 C292 61 273 88 226 72Z"/></svg></div><div class="rule"></div><p class="statement-body">Sanar no es regresar a quien fuimos. Es descubrir, con paciencia y valentía, <strong>todo lo que todavía podemos llegar a ser.</strong><br><br>No hay prisa. No hay deuda. Hay camino.</p></div>
+ </section>
+ <section class="interlude" aria-labelledby="inter-title"><div class="interlude-inner reveal"><div class="smallcaps" style="color:#bfd0c0">03 — Lo que permanece</div><h2 id="inter-title" class="serif">La distancia mide el espacio.<br><em>No lo que nos inspira.</em></h2><div class="horizon" aria-hidden="true"></div><p class="under">A veces basta saber que en otro lugar del mundo existe alguien que hace más hermoso el hecho de estar vivos.</p><p class="minor">Y eso también merece celebrarse.</p></div></section>
+
+ <section class="media-chapter origami" id="origami" aria-labelledby="origami-title">
+  <div class="media-grid">
+   <div class="media-copy reveal">
+    <div class="chapter smallcaps">04 <span></span> El arte de transformarse</div>
+    <h2 id="origami-title" class="serif">Ningún pliegue<br><em>es el final.</em></h2>
+    <p>El origami tiene una lección silenciosa: cada transformación deja una huella. Y aun así, de una misma hoja pueden surgir formas que nunca habríamos imaginado.</p>
+    <p>La vida también se despliega de maneras inesperadas.</p>
+    <p class="media-note">Un momento para descubrir, hacer y crear.</p>
+   </div>
+   <div class="reveal">
+    <div class="media-frame"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/jNgtdEzyWNE?rel=0" title="Origami — video de YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <a class="media-link" href="https://www.youtube.com/watch?v=jNgtdEzyWNE" target="_blank" rel="noopener noreferrer">Ver el video en YouTube ↗</a>
+   </div>
+  </div>
+ </section>
+
+ <section class="cardioid-section" id="cardioide" aria-labelledby="cardioid-title">
+  <div class="cardioid-head reveal">
+   <div class="chapter smallcaps">05 <span></span> Geometría de lo que permanece</div>
+   <h2 id="cardioid-title" class="serif">La belleza también<br><em>tiene una ecuación.</em></h2>
+   <p>Una cardioide no necesita que dibujemos un corazón. Aparece cuando dejamos que las matemáticas hagan lo suyo. Juega con la curva, cambia su orientación, descubre los hilos que la forman.</p>
+  </div>
+  <div class="cardioid-lab">
+   <div class="cardioid-visual reveal">
+    <canvas id="cardioid-canvas" role="img" aria-label="Simulador interactivo de una cardioide matemática. Se puede arrastrar para girar la figura."></canvas>
+    <span class="canvas-index">FÜR VANIMA / ESTUDIO 01</span>
+    <span class="canvas-hint">↔ Arrastra para cambiar la orientación</span>
+   </div>
+   <div class="cardioid-controls reveal">
+    <div class="smallcaps">Un pequeño laboratorio</div>
+    <div class="cardioid-switch" role="group" aria-label="Tipo de representación">
+     <button id="mode-curve" type="button" aria-pressed="true">Curva polar</button>
+     <button id="mode-threads" type="button" aria-pressed="false">Hilos de luz</button>
+    </div>
+    <p class="control-note" id="lab-description">La curva se construye punto por punto. Cada instante deja un trazo.</p>
+    <div><label class="range-title" for="size-range">Amplitud <output id="size-value">1.00×</output></label><input id="size-range" type="range" min="55" max="120" value="100" step="1"></div>
+    <div><label class="range-title" for="angle-range">Orientación <output id="angle-value">0°</output></label><input id="angle-range" type="range" min="0" max="360" value="0" step="1"></div>
+    <div id="threads-control" hidden><label class="range-title" for="thread-range">Número de hilos <output id="thread-value">260</output></label><input id="thread-range" type="range" min="60" max="500" value="260" step="10"></div>
+    <div class="cardioid-equation" id="cardioid-equation">r = a(1 − cos θ)</div>
+    <div class="cardioid-actions"><button id="cardioid-play" type="button" aria-pressed="false">▶ Animar</button><button id="cardioid-reset" type="button">↺ Reiniciar</button></div>
+   </div>
+  </div>
+  <div class="cardioid-after"><span>Dos representaciones. Una misma geometría.</span><span><strong>No todo lo hermoso necesita explicación.</strong> Pero algunas cosas merecen ser descubiertas.</span></div>
+ </section>
+ <section class="section experience" id="florecer" aria-labelledby="grow-title"><div class="chapter smallcaps reveal">06 <span></span> El tiempo de las cosas bellas</div><h2 id="grow-title" class="serif reveal">Lo que ha de florecer<br><em>encontrará su tiempo.</em></h2><p class="desc reveal">No hace falta apresurar la primavera. Algunas cosas crecen en silencio, y un día simplemente están ahí.</p><div class="plant-wrap" id="plant" aria-hidden="true"><svg viewBox="0 0 280 260"><g class="stem"><path d="M140 235 C137 198 149 173 142 143 C138 118 134 108 141 77"/><path d="M140 183 Q112 143 75 151 M144 164 Q184 128 202 139 M140 125 Q115 102 102 79"/></g><g class="foliage"><path d="M76 151 Q40 112 25 126 Q34 163 76 151Z" fill="#72967c55"/><path d="M202 139 Q235 103 251 117 Q242 151 202 139Z" fill="#72967c55"/><path d="M102 79 Q63 53 69 38 Q105 41 102 79Z" fill="#72967c55"/><path class="petal" d="M141 82 Q101 57 117 33 Q139 21 145 54 Q149 16 177 26 Q195 48 160 69 Q193 58 192 81 Q169 99 145 77 Q133 110 107 98 Q92 82 141 82Z"/><circle cx="145" cy="75" r="6" fill="#b4755f" stroke="none"/></g></svg><div class="soil"></div></div><button id="grow" class="cta" type="button">Dejar que florezca &nbsp; ↗</button><p class="response" id="growth-response" role="status" aria-live="polite">La vida siempre encuentra una manera.</p></section>
+ <section class="finale" aria-labelledby="final-title"><div class="mini" aria-hidden="true"></div><p class="smallcaps" style="color:#afc1b1">Una dedicatoria sin condiciones</p><h2 id="final-title" class="title serif">Für <em style="font-weight:400;color:#e2ae90">Vanima.</em></h2><p class="subtitle serif">Dime que me quieres sin decirme que me quieres.</p><p class="sign">Por la vida. Por lo que sana. Por lo que vendrá.</p></section>
+ <footer class="footer"><span>Für Vanima · Un homenaje a estar vivos</span><a href="#inicio" style="text-decoration:none">Volver al comienzo ↑</a></footer>
+</main>
+<script>
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('grow').addEventListener('click',()=>{
+    document.getElementById('plant').classList.add('bloom');
+    document.getElementById('growth-response').classList.add('visible');
+    const b=document.getElementById('grow');b.textContent='Y la vida continúa ✓';b.setAttribute('aria-label','La flor ha florecido');
+  });
+
+  // Cardioide polar r=a(1-cos(theta)) y construcción por tablas del 2 en un círculo.
+  (()=>{
+    const c=document.getElementById('cardioid-canvas'),ctx=c.getContext('2d');
+    const size=document.getElementById('size-range'),angle=document.getElementById('angle-range'),threads=document.getElementById('thread-range');
+    const bc=document.getElementById('mode-curve'),bt=document.getElementById('mode-threads'),play=document.getElementById('cardioid-play');
+    const description=document.getElementById('lab-description'),eq=document.getElementById('cardioid-equation');
+    const tc=document.getElementById('threads-control');
+    let mode='curve',progress=1,running=false,last=0,raf=0,cssW=600,cssH=485,dragX=null;
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function resize(){const r=c.getBoundingClientRect();cssW=r.width;cssH=r.height;const d=Math.min(devicePixelRatio||1,2);c.width=Math.round(cssW*d);c.height=Math.round(cssH*d);ctx.setTransform(d,0,0,d,0,0);draw()}
+    function draw(){
+      const w=cssW,h=cssH,rot=Number(angle.value)*Math.PI/180,scale=Number(size.value)/100;
+      ctx.clearRect(0,0,w,h);const cx=w/2,cy=h/2,R=Math.min(w,h)*.32*scale;
+      // fine concentric guide rings, discreetly architectural
+      ctx.save();ctx.translate(cx,cy);ctx.strokeStyle='rgba(199,224,204,.10)';ctx.lineWidth=.7;
+      for(let i=1;i<=3;i++){ctx.beginPath();ctx.arc(0,0,R*i/3,0,Math.PI*2);ctx.stroke()}
+      ctx.beginPath();ctx.moveTo(-w/2,0);ctx.lineTo(w/2,0);ctx.moveTo(0,-h/2);ctx.lineTo(0,h/2);ctx.stroke();
+      ctx.rotate(rot);
+      if(mode==='curve'){
+        // center curve in bounding box: x(theta) ranges from -2a to a/4
+        const a=R/2;
+        ctx.translate(.82*a,0);
+        const count=Math.max(3,Math.round(1100*progress));
+        ctx.shadowColor='rgba(228,164,134,.5)';ctx.shadowBlur=17;ctx.strokeStyle='#f1b79b';ctx.lineWidth=2.35;ctx.lineCap='round';ctx.beginPath();
+        for(let i=0;i<=count;i++){const t=i/1100*Math.PI*2,rad=a*(1-Math.cos(t));const x=rad*Math.cos(t),y=rad*Math.sin(t);i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.stroke();ctx.shadowBlur=0;
+        const t=progress*Math.PI*2,rad=a*(1-Math.cos(t));ctx.beginPath();ctx.fillStyle='#f8dac7';ctx.arc(rad*Math.cos(t),rad*Math.sin(t),4,0,Math.PI*2);ctx.fill();
+      }else{
+        const n=Number(threads.value),drawN=Math.round(n*progress),radius=R;
+        ctx.beginPath();ctx.strokeStyle='rgba(219,229,208,.32)';ctx.lineWidth=1;ctx.arc(0,0,radius,0,Math.PI*2);ctx.stroke();
+        ctx.lineWidth=.78;
+        for(let i=0;i<drawN;i++){
+          const t=i/n*Math.PI*2,second=(2*t)%(Math.PI*2);
+          const x1=radius*Math.cos(t),y1=radius*Math.sin(t),x2=radius*Math.cos(second),y2=radius*Math.sin(second);
+          ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);
+          ctx.strokeStyle=`rgba(236,181,151,${.15+.52*(i/n)})`;ctx.stroke();
+        }
+      }
+      ctx.restore();
+    }
+    function update(){document.getElementById('size-value').textContent=(Number(size.value)/100).toFixed(2)+'×';document.getElementById('angle-value').textContent=angle.value+'°';document.getElementById('thread-value').textContent=threads.value;draw()}
+    function setMode(m){mode=m;bc.setAttribute('aria-pressed',String(m==='curve'));bt.setAttribute('aria-pressed',String(m==='threads'));tc.hidden=m!=='threads';eq.textContent=m==='curve'?'r = a(1 − cos θ)':'p(t) → p(2t mod 2π)';description.textContent=m==='curve'?'La curva se construye punto por punto. Cada instante deja un trazo.':'Une cada punto de una circunferencia con el punto que tiene el doble de su ángulo. La cardioide aparece sola.';progress=1;stop();draw()}
+    function stop(){running=false;cancelAnimationFrame(raf);play.textContent='▶ Animar';play.setAttribute('aria-pressed','false')}
+    function tick(t){if(!running)return;const dt=Math.min((t-last)||16,60);last=t;progress+=dt/(mode==='curve'?5200:7000);if(progress>=1)progress=0;draw();raf=requestAnimationFrame(tick)}
+    function animate(){if(running){stop();return}running=true;progress=0;last=0;play.textContent='Ⅱ Pausar';play.setAttribute('aria-pressed','true');raf=requestAnimationFrame(tick)}
+    [size,angle,threads].forEach(e=>e.addEventListener('input',update));bc.addEventListener('click',()=>setMode('curve'));bt.addEventListener('click',()=>setMode('threads'));play.addEventListener('click',animate);
+    document.getElementById('cardioid-reset').addEventListener('click',()=>{stop();size.value=100;angle.value=0;threads.value=260;progress=1;setMode('curve');update()});
+    c.addEventListener('pointerdown',e=>{dragX=e.clientX;c.setPointerCapture(e.pointerId)});
+    c.addEventListener('pointermove',e=>{if(dragX===null)return;const dx=e.clientX-dragX;dragX=e.clientX;angle.value=(Number(angle.value)+Math.round(dx*.75)+360)%360;update()});
+    ['pointerup','pointercancel','lostpointercapture'].forEach(event=>c.addEventListener(event,()=>{dragX=null}));
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});
+    if('ResizeObserver'in window)new ResizeObserver(resize).observe(c);else window.addEventListener('resize',resize);
+    update();resize();
+  })();
+</script>
+</body>
+</html>
