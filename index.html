@@ -52,6 +52,22 @@
     .cardioid-after{max-width:1220px;margin:25px auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;color:#bbcec0;font-size:13px;line-height:1.7}.cardioid-after strong{font-weight:550;color:#edb99d}
     @media(max-width:850px){.cardioid-lab{grid-template-columns:1fr}.cardioid-visual,#cardioid-canvas{min-height:370px}.cardioid-controls{gap:20px}.cardioid-section{padding:80px 26px}}
     @media(max-width:480px){.cardioid-visual,#cardioid-canvas{min-height:320px}.canvas-hint{font-size:9px;left:15px}.cardioid-controls{padding:21px}}
+
+    /* Epílogo interactivo: luz y oscuridad */
+    .duality{--split:100%;position:relative;isolation:isolate;height:100svh;min-height:560px;background:#fff;color:#242424;overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+    .duality-face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(35px,8vw,110px) 27px 120px}
+    .duality-light{background:#fff;color:#232725}
+    .duality-dark{background:#101c1b;color:#f9f7f1;clip-path:inset(0 0 0 var(--split));pointer-events:none}
+    .duality-title{font-size:clamp(44px,7vw,102px);font-weight:400;letter-spacing:-.057em;line-height:1.12;max-width:1100px;margin:0}
+    .duality-note{font-size:clamp(16px,1.7vw,22px);line-height:1.9;max-width:690px;margin:40px auto 0;color:#c2cec7;font-weight:350}
+    .duality-control{position:absolute;bottom:clamp(45px,9vh,100px);left:8%;right:8%;height:70px;z-index:5;display:flex;align-items:center;touch-action:none}
+    .duality-track{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,#9daba7 0%,#9daba7 100%);opacity:.75;pointer-events:none}
+    .duality-range{position:relative;width:100%;height:70px;margin:0;opacity:0;cursor:ew-resize;touch-action:none}
+    .duality-knob{position:absolute;top:50%;left:var(--split);transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#fff;border:1px solid #9aa9a2;box-shadow:0 4px 25px #0002;display:grid;place-items:center;color:#22342c;font-size:19px;letter-spacing:-5px;padding-right:5px;pointer-events:none;transition:background .25s}
+    .duality-guide{position:absolute;bottom:clamp(16px,3vh,27px);left:0;right:0;text-align:center;z-index:5;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#707d75;pointer-events:none;mix-blend-mode:difference}
+    .duality:focus-within .duality-knob{outline:2px solid #b28a77;outline-offset:4px}
+    .duality-dragging{cursor:ew-resize}
+    @media(max-width:600px){.duality{min-height:620px}.duality-face{padding-bottom:130px}.duality-title{font-size:clamp(40px,10vw,64px)}.duality-note{font-size:16px;margin-top:27px}.duality-control{left:11%;right:11%}.duality-guide{font-size:9px;letter-spacing:.12em}}
   </style>
 </head>
 <body>
@@ -135,8 +151,17 @@
   <div class="cardioid-after"><span>Dos representaciones. Una misma geometría.</span><span><strong>No todo lo hermoso necesita explicación.</strong> Pero algunas cosas merecen ser descubiertas.</span></div>
  </section>
  <section class="section experience" id="florecer" aria-labelledby="grow-title"><div class="chapter smallcaps reveal">06 <span></span> El tiempo de las cosas bellas</div><h2 id="grow-title" class="serif reveal">Lo que ha de florecer<br><em>encontrará su tiempo.</em></h2><p class="desc reveal">No hace falta apresurar la primavera. Algunas cosas crecen en silencio, y un día simplemente están ahí.</p><div class="plant-wrap" id="plant" aria-hidden="true"><svg viewBox="0 0 280 260"><g class="stem"><path d="M140 235 C137 198 149 173 142 143 C138 118 134 108 141 77"/><path d="M140 183 Q112 143 75 151 M144 164 Q184 128 202 139 M140 125 Q115 102 102 79"/></g><g class="foliage"><path d="M76 151 Q40 112 25 126 Q34 163 76 151Z" fill="#72967c55"/><path d="M202 139 Q235 103 251 117 Q242 151 202 139Z" fill="#72967c55"/><path d="M102 79 Q63 53 69 38 Q105 41 102 79Z" fill="#72967c55"/><path class="petal" d="M141 82 Q101 57 117 33 Q139 21 145 54 Q149 16 177 26 Q195 48 160 69 Q193 58 192 81 Q169 99 145 77 Q133 110 107 98 Q92 82 141 82Z"/><circle cx="145" cy="75" r="6" fill="#b4755f" stroke="none"/></g></svg><div class="soil"></div></div><button id="grow" class="cta" type="button">Dejar que florezca &nbsp; ↗</button><p class="response" id="growth-response" role="status" aria-live="polite">La vida siempre encuentra una manera.</p></section>
- <section class="finale" aria-labelledby="final-title"><div class="mini" aria-hidden="true"></div><p class="smallcaps" style="color:#afc1b1">Una dedicatoria sin condiciones</p><h2 id="final-title" class="title serif">Für <em style="font-weight:400;color:#e2ae90">Vanima.</em></h2><p class="subtitle serif">Dime que me quieres sin decirme que me quieres.</p><p class="sign">Por la vida. Por lo que sana. Por lo que vendrá.</p></section>
  <footer class="footer"><span>Für Vanima · Un homenaje a estar vivos</span><a href="#inicio" style="text-decoration:none">Volver al comienzo ↑</a></footer>
+ <section class="duality" id="epilogo" aria-label="Epílogo: entre la luz y la oscuridad">
+  <div class="duality-face duality-light"><h2 class="duality-title serif">En tu luz te amaré.</h2></div>
+  <div class="duality-face duality-dark"><h2 class="duality-title serif">En tu oscuridad<br>también te amaré.</h2><p class="duality-note serif">Procura no tardar tanto si deseas regresar.<br>Yo espero estar donde me dejaste.</p></div>
+  <div class="duality-control">
+   <div class="duality-track"></div>
+   <input class="duality-range" id="duality-range" type="range" min="0" max="100" value="100" step="1" aria-label="Desliza entre oscuridad y luz: izquierda para oscuridad, derecha para luz" aria-valuetext="Luz completa">
+   <span class="duality-knob" aria-hidden="true">‹ ›</span>
+  </div>
+  <p class="duality-guide" aria-hidden="true">← Oscuridad &nbsp; · &nbsp; Desliza &nbsp; · &nbsp; Luz →</p>
+ </section>
 </main>
 <script>
   const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
@@ -199,6 +224,35 @@
     document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});
     if('ResizeObserver'in window)new ResizeObserver(resize).observe(c);else window.addEventListener('resize',resize);
     update();resize();
+  })();
+
+  // Epílogo: deslizador bidireccional compatible con mouse, tacto y teclado.
+  (()=>{
+    const panel=document.getElementById('epilogo');
+    const range=document.getElementById('duality-range');
+    const bar=panel.querySelector('.duality-control');
+    function paint(value){
+      const n=Math.max(0,Math.min(100,Number(value)));
+      range.value=String(Math.round(n));
+      panel.style.setProperty('--split',n+'%');
+      range.setAttribute('aria-valuetext', n>=99?'Luz completa':n<=1?'Oscuridad completa':Math.round(100-n)+'% oscuridad');
+    }
+    function setFromX(x){const r=bar.getBoundingClientRect();paint((x-r.left)/r.width*100)}
+    let pointer=null;
+    panel.addEventListener('pointerdown',e=>{
+      if(e.pointerType==='mouse'&&e.button!==0)return;
+      if(e.target.closest('a,button'))return;
+      pointer={id:e.pointerId,x:e.clientX,y:e.clientY,drag:false};
+    });
+    panel.addEventListener('pointermove',e=>{
+      if(!pointer||pointer.id!==e.pointerId)return;
+      if(Math.abs(e.clientX-pointer.x)>8 && Math.abs(e.clientX-pointer.x)>Math.abs(e.clientY-pointer.y)*1.1){pointer.drag=true;panel.classList.add('duality-dragging')}
+      if(pointer.drag)setFromX(e.clientX);
+    });
+    function done(e){if(pointer&&pointer.id===e.pointerId){pointer=null;panel.classList.remove('duality-dragging')}}
+    panel.addEventListener('pointerup',done);panel.addEventListener('pointercancel',done);
+    range.addEventListener('input',()=>paint(range.value));
+    paint(100);
   })();
 </script>
 </body>
