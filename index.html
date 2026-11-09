@@ -77,6 +77,36 @@
     .duality:focus-within .duality-knob{outline:2px solid #b28a77;outline-offset:4px}
     .duality-dragging{cursor:ew-resize}
     @media(max-width:600px){.duality{min-height:620px}.duality-face{padding-bottom:130px}.duality-title{font-size:clamp(40px,10vw,64px)}.duality-note{font-size:16px;margin-top:27px}.duality-control{left:11%;right:11%}.duality-guide{font-size:9px;letter-spacing:.12em}}
+
+
+    /* Dos nuevas escuchas: una pequeña constelación musical */
+    .music-additions{max-width:1320px;margin:clamp(44px,6vw,76px) auto 0}
+    .music-additions-intro{max-width:700px;margin:0 0 22px}
+    .music-additions-intro .smallcaps{color:#e5bd9f;font-size:10px}
+    .music-additions-intro p{color:#b9cabe;font-family:Georgia,serif;font-size:clamp(18px,2vw,24px);font-style:italic;line-height:1.55;margin:10px 0 0}
+    .deezer-collection{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .deezer-collection .deezer-card{margin-top:0;min-width:0}
+    @media(max-width:700px){.deezer-collection{grid-template-columns:1fr;gap:18px}}
+
+    /* Un cuento escrito casi en voz baja: está ahí, aunque nadie lo busque */
+    .whisper-section{position:relative;background:#0d211f;color:#e5ece4;padding:clamp(125px,15vw,210px) 26px clamp(130px,17vw,230px);overflow:hidden}
+    .whisper-section:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 37%,#1b3a322e,transparent 67%);pointer-events:none}
+    .whisper-inner{position:relative;max-width:750px;margin:auto}
+    .whisper-marker{display:flex;align-items:center;gap:18px;color:#778b7f;font-size:10px;letter-spacing:.27em;text-transform:uppercase}
+    .whisper-marker:after{content:"";height:1px;width:65px;background:#657e70}
+    .whisper-title{font-size:clamp(40px,5vw,67px);font-weight:400;letter-spacing:-.045em;line-height:1.13;margin:26px 0 62px;color:#a5b8a8}
+    /* Tres momentos: hay palabras / alguien decide leerlas / alguien elige callar. */
+    .whisper-text{color:rgba(227,238,227,.32);font-family:'Iowan Old Style',Baskerville,'Palatino Linotype','Book Antiqua',Georgia,serif;font-size:clamp(16px,1.42vw,19px);font-weight:400;line-height:2.05;letter-spacing:.008em;transition:color 1.45s ease}
+    .whisper-text p{margin:0 0 1.65em}
+    .whisper-text p:last-child{margin-bottom:0}
+    .whisper-section.is-reading .whisper-text{color:rgba(241,247,238,.98)}
+    .whisper-section.is-silent .whisper-text{color:rgba(227,238,227,.12);transition-duration:2.2s}
+    .whisper-toggle{display:inline-block;margin-top:53px;background:transparent;border:0;border-bottom:1px solid #698074;color:#a3b8a9;padding:10px 0;cursor:pointer;font-size:11px;letter-spacing:.13em;transition:color .25s,border-color .25s}
+    .whisper-toggle:hover,.whisper-toggle:focus-visible{color:#f3f0e8;border-color:#e3b29a}
+    .whisper-toggle:focus-visible{outline:2px solid #e3b29a;outline-offset:6px}
+    /* La elección no se deshace al pasar el cursor o al enfocar el botón. */
+    @media(prefers-contrast:more){.whisper-text,.whisper-section.is-reading .whisper-text,.whisper-section.is-silent .whisper-text{color:#e3eee2}.whisper-marker{color:#d0dbd2}}
+    @media(prefers-reduced-motion:reduce){.whisper-text,.whisper-section.is-silent .whisper-text{transition:none}}
   </style>
 </head>
 <body>
@@ -110,6 +140,23 @@
        <div class="deezer-heading"><span class="smallcaps">También en Deezer</span><span class="deezer-subtitle">Otra manera de vivir este momento</span></div>
        <iframe class="deezer-player" title="Reproductor de Deezer — Für Vanima" src="https://widget.deezer.com/widget/auto/track/13257566" loading="lazy" allow="encrypted-media; clipboard-write" allowtransparency="true"></iframe>
      </div>
+   </div>
+  </div>
+
+  <div class="music-additions reveal" aria-label="Otras dos escuchas en Deezer">
+   <div class="music-additions-intro">
+    <div class="smallcaps">Todavía hay música</div>
+    <p>Algunas melodías se quedan, incluso después del silencio.</p>
+   </div>
+   <div class="deezer-collection">
+    <div class="deezer-card">
+     <div class="deezer-heading"><span class="smallcaps">Un álbum para quedarse</span><span class="deezer-subtitle">Escuchar a otro ritmo</span></div>
+     <iframe class="deezer-player" title="Álbum en Deezer — Für Vanima" src="https://widget.deezer.com/widget/auto/album/472206235" width="100%" height="300" loading="lazy" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+    </div>
+    <div class="deezer-card">
+     <div class="deezer-heading"><span class="smallcaps">Una canción más</span><span class="deezer-subtitle">Por lo que todavía espera</span></div>
+     <iframe class="deezer-player" title="Canción en Deezer — Für Vanima" src="https://widget.deezer.com/widget/auto/track/937334" width="100%" height="300" loading="lazy" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+    </div>
    </div>
   </div>
  </section>
@@ -164,6 +211,21 @@
   <div class="cardioid-after"><span>Dos representaciones. Una misma geometría.</span><span><strong>No todo lo hermoso necesita explicación.</strong> Pero algunas cosas merecen ser descubiertas.</span></div>
  </section>
  <section class="section experience" id="florecer" aria-labelledby="grow-title"><div class="chapter smallcaps reveal">06 <span></span> El tiempo de las cosas bellas</div><h2 id="grow-title" class="serif reveal">Lo que ha de florecer<br><em>encontrará su tiempo.</em></h2><p class="desc reveal">No hace falta apresurar la primavera. Algunas cosas crecen en silencio, y un día simplemente están ahí.</p><div class="plant-wrap" id="plant" aria-hidden="true"><svg viewBox="0 0 280 260"><g class="stem"><path d="M140 235 C137 198 149 173 142 143 C138 118 134 108 141 77"/><path d="M140 183 Q112 143 75 151 M144 164 Q184 128 202 139 M140 125 Q115 102 102 79"/></g><g class="foliage"><path d="M76 151 Q40 112 25 126 Q34 163 76 151Z" fill="#72967c55"/><path d="M202 139 Q235 103 251 117 Q242 151 202 139Z" fill="#72967c55"/><path d="M102 79 Q63 53 69 38 Q105 41 102 79Z" fill="#72967c55"/><path class="petal" d="M141 82 Q101 57 117 33 Q139 21 145 54 Q149 16 177 26 Q195 48 160 69 Q193 58 192 81 Q169 99 145 77 Q133 110 107 98 Q92 82 141 82Z"/><circle cx="145" cy="75" r="6" fill="#b4755f" stroke="none"/></g></svg><div class="soil"></div></div><button id="grow" class="cta" type="button">Dejar que florezca &nbsp; ↗</button><p class="response" id="growth-response" role="status" aria-live="polite">La vida siempre encuentra una manera.</p></section>
+ <section class="whisper-section" id="lo-no-dicho" aria-labelledby="whisper-title">
+  <div class="whisper-inner">
+   <div class="whisper-marker">07 · Lo que no se dijo</div>
+   <h2 id="whisper-title" class="whisper-title serif">Quizá alguien lo encuentre.</h2>
+   <div class="whisper-text" id="whisper-story">
+    <p>El segundero del reloj de pared avanzaba con un seco y terrible golpe, comiéndose la tarde a mordiscos iguales mientras el vapor del café empezaba ya a enfriarse sobre la mesa. Afuera, la luz giraba sobre los tejados sin pedir permiso, recordándole que todo lo que no se dice a tiempo acaba por formar parte del paisaje.</p>
+    <p>Por la calle la gente andaba deprisa cuidando que cada palabra fuera ligera, casi transparente, para no estorbar el paso ni alterar el orden de las cosas. Nadie miraba las grietas del pavimento donde la hierba se empeñaba en salir, nadie se detenía a percibir cómo el silencio entre saludo y saludo se volvía más y más espeso, más difícil de cruzar. Era una tregua tácita: mientras nadie nombrara lo que faltaba, nadie tenía que buscarlo.</p>
+    <p>Mateo sentía el pulso de la manilla de hilo contra su muñeca, midiendo cada latido como un recordatorio que no se detiene aunque uno cierre los ojos. En la silla de enfrente, el viejo abrigo de su abuela seguía oliendo a tierra mojada y humo de leña, un olor cada vez más tenue, como una historia que se borra con los años cuando nadie la cuenta.</p>
+    <p>Sabía que el tiempo no se iba a detener hasta que yo estuviera listo. Con cada minuto que pasaba en aquella cómoda quietud, iba sellando un poco más la puerta, transformando lo que todavía era elección en costumbre, y la costumbre en olvido. No era que nadie le obligara a seguir sentado, pero tampoco nadie vendría a sacarlo.</p>
+    <p>Antes de que la noche borrase todo reflejo, Mateo miró el suyo en el cristal de la ventana. No había dicho una sola palabra; el silencio de la casa continuaba, pero ya no pesaba igual.</p>
+    <p>Se descalzó junto a la puerta, sintiendo bajo sus pies desnudos el frío real del suelo, y salió a la calle, justo cuando el reloj de la pared marcaba la hora exacta, sin retraso alguno, mientras el sonido del río volvía a abrirse paso por debajo del ruido de la ciudad.</p>
+   </div>
+   <button class="whisper-toggle" id="whisper-toggle" type="button" aria-pressed="false" aria-controls="whisper-story">Acercar las palabras ↗</button>
+  </div>
+ </section>
  <footer class="footer"><span>Für Vanima · Un homenaje a estar vivos</span><a href="#inicio" style="text-decoration:none">Volver al comienzo ↑</a></footer>
  <section class="duality" id="epilogo" aria-label="Epílogo: entre la luz y la oscuridad">
   <div class="duality-face duality-light"><h2 class="duality-title serif">En tu luz te amaré.</h2></div>
@@ -266,6 +328,20 @@
     panel.addEventListener('pointerup',done);panel.addEventListener('pointercancel',done);
     range.addEventListener('input',()=>paint(range.value));
     paint(100);
+  })();
+
+  // La primera mirada encuentra un texto tenue; leerlo y devolverlo al silencio
+  // son decisiones explícitas, independientes del hover y del foco del teclado.
+  (()=>{
+    const section=document.getElementById('lo-no-dicho');
+    const toggle=document.getElementById('whisper-toggle');
+    toggle.addEventListener('click',()=>{
+      const reading=!section.classList.contains('is-reading');
+      section.classList.toggle('is-reading',reading);
+      section.classList.toggle('is-silent',!reading);
+      toggle.setAttribute('aria-pressed',String(reading));
+      toggle.textContent=reading?'Volver al silencio ↘':'Acercar las palabras ↗';
+    });
   })();
 </script>
 </body>
